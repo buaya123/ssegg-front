@@ -24,7 +24,7 @@
                
                 <div class="row" style="margin:5px">
                     <div class="col-1">
-                        <i class="far fa-question-circle" data-mdb-toggle="tooltip" data-placement="right" title="https://ssegg-front.vercel.app/" ></i>
+                        <i class="far fa-question-circle" data-mdb-toggle="tooltip" data-placement="right" title="Example: Kimberly Anne P. Velasco" ></i>
                     </div>
                     <div class="col-4" style="text-align:right">
                         <label >Full Name  </label>
@@ -110,6 +110,9 @@
                 }
             });
             $("#sbtn").click(()=>{
+
+                $("#sbtn").attr("disabled",true);
+
                 var postForm = { //Fetch form data
                 'fname'     : $('#fname').val(),
                 'sname'     : $('#sname').val(),
@@ -124,6 +127,7 @@
                     dataType  : 'json',
                     success   : function(data) {
                                     alert(data)
+                                    $("#sbtn").removeAttr("disabled");
                                 }
                 });
 

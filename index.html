@@ -53,9 +53,9 @@
                     </div>
                     <div class="col-6" style="text-align:left">  
                         <select id="aux" name="auxilliary" class="form-select" >
-                        <option selected>Select an Option</option>
-                        <option value="1">Youth Unlimited</option>
-                        <option value="2">Young Professional</option>
+                        <option value="" selected>Select an Option</option>
+                        <option value="0">Youth Unlimited</option>
+                        <option value="1">Young Professional</option>
                       </select>
                     </div>
                 </div>
@@ -102,9 +102,9 @@
             console.log( "ready!" );
             $("#aux").change(function(){
                 if($("#aux").val() == 1){
-                    $("#budget").val("Atleast 150 pesos");
+                    $("#budget").val("At least 150 pesos");
                 }else if($("#aux").val() == 2){
-                    $("#budget").val("Atleast 300 pesos");
+                    $("#budget").val("At least 300 pesos");
                 }else{
                     $("#budget").val("");
                 }
@@ -120,17 +120,31 @@
                 'wishlist'     : $('#wishList').val()
                 };
 
-                $.ajax({ //Process the form using $.ajax()
-                    type      : 'POST', //Method type
-                    url       : 'https://ssegg.vercel.app/postpeople', //Your form processing file URL
-                    data      : postForm, //Forms name
-                    dataType  : 'json',
-                    success   : function(data) {
-                                    alert(data)
-                                    $("#sbtn").removeAttr("disabled");
-                                }
-                });
-
+                if(postForm.fname != ""&& postForm.sname != "" && postForm.aux != "" && postForm.wishlist != ""){
+                    if(postForm.fname.length < 3){
+                        alert("Full name must be greater than 3");
+                        $("#sbtn").removeAttr("disabled");
+                    }else{
+                        $.ajax({ //Process the form using $.ajax()
+                        type      : 'POST', //Method type
+                        url       : 'https://ssegg.vercel.app/postpeople', //Your form processing file URL
+                        data      : postForm, //Forms name
+                        dataType  : 'json',
+                        success   : function(data) {
+                                        alert(data)
+                                        $("#sbtn").removeAttr("disabled");
+                                    },
+                        fail        : function(){
+                            alert("There is an error.Could not submit entry");
+                            $("#sbtn").removeAttr("disabled");
+                        }
+                        });
+                    }
+               
+                }else{
+                    alert("Dont leave Blanks")
+                    $("#sbtn").removeAttr("disabled");
+                }
             })
             
             

@@ -7,49 +7,51 @@
     <head>
 
     </head>
-    <body style="background-color:rgb(56,90,124)">
+    <body style="background-image: url(resources/bkg.jpg); height:100%;background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;">
         <div class="row">
-            <span style="text-align:center;font-size:45px;font-family: 'Brush Script MT', cursive;background-color:rgb(249,113,113)">Secret Samaritan Exchange Gifts Generator</span>
+            <span style="text-align:center;font-size:45px;font-family: 'Brush Script MT', cursive;background-color:rgb(56,90,124);color:white">Secret Samaritan Exchange Gifts Generator</span>
         </div>
         <div class="container-fluid" style="position:absolute;top:10vh">
             <div class="row" >
                 <div style="text-align:center">
-                    <img  src="resources/logo.png" style="width:549px;height:411px">
+                    <img  src="resources/newestlogo.png" style="width:350;height:300">
                 </div>  
             </div>
-            <div class="container-fluid" style="position:absolute;">
+            <div class="container-fluid" style="position:absolute;top:120%">
                 <div class="row justify-content-center">
-                <div class="col-6 card" style="text-align: center;background-color: rgb(249,145,146);">
+                <div class="col-6 card" style="text-align: center;background-color: rgba(56,90,124,.7)">
             <div class="card-body">
                
-                <div class="row" style="margin:5px">
+                <div class="row" style="margin:10px">
                     <div class="col-1">
-                        <i class="far fa-question-circle" data-mdb-toggle="tooltip" data-placement="right" title="Example: Kimberly Anne P. Velasco" ></i>
+                        <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Example: Kimberly Anne P. Velasco" ></i>
                     </div>
-                    <div class="col-4" style="text-align:right">
-                        <label >Full Name  </label>
+                    <div class="col-4" style="text-align:right;color:white;vertical-align: middle;">
+                        <label style="position:relative;top:20%">Full Name</label>
                     </div>
                     <div class="col-6" style="text-align:left">
                         <input id="fname" type="text" name="fullName" class="form-control"  />
                     </div>
                 </div> 
-                <div class="row" style="margin:5px">   
+                <div class="row" style="margin:10px">   
                     <div class="col-1">
-                        <i class="far fa-question-circle" data-mdb-toggle="tooltip" data-placement="right" title="Pamili ug something na dili mahalata na ikaw. Duh." ></i>
+                        <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Pamili ug something na dili mahalata na ikaw. Duh." ></i>
                     </div>
-                    <div class="col-4" style="text-align:right">
-                        <label >Secret Code Name </label>
+                    <div class="col-4" style="text-align:right;color:white">
+                        <label style="position:relative;top:20%">Secret Code Name </label>
                     </div>
                     <div class="col-6" style="text-align:left">
                         <input id="sname" type="text" name="secretName" class="form-control"  />
                     </div>
                 </div>
-                <div class="row" style="margin:5px"> 
+                <div class="row" style="margin:10px"> 
                     <div class="col-1">
-                        <i class="far fa-question-circle" data-mdb-toggle="tooltip" data-placement="right" title="Youth Unlimited / Young Professional" ></i>
+                        <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Youth Unlimited / Young Professional" ></i>
                     </div>   
-                    <div class="col-4" style="text-align:right">
-                        <label >Auxilliary </label>
+                    <div class="col-4" style="text-align:right;color:white">
+                        <label style="position:relative;top:20%">Auxilliary </label>
                     </div>
                     <div class="col-6" style="text-align:left">  
                         <select id="aux" name="auxilliary" class="form-select" >
@@ -59,23 +61,23 @@
                       </select>
                     </div>
                 </div>
-                <div class="row" style="margin:5px">
+                <div class="row" style="margin:10px">
                     <div class="col-1">
-                        <i class="far fa-question-circle" data-mdb-toggle="tooltip" data-placement="right" title="Mao ni imong gastuon para sa gift na imong ihatag." ></i>
+                        <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Mao ni imong gastuon para sa gift na imong ihatag." ></i>
                     </div>
-                    <div class="col-4" style="text-align:right">
-                        <label >Budget </label>
+                    <div class="col-4" style="text-align:right;color:white">
+                        <label style="position:relative;top:20%">Budget </label>
                     </div>
                     <div class="col-6" style="text-align:left">
                         <input type="text" id="budget" class="form-control"  style="background-color: rgb(212, 212, 212)" readonly>
                     </div>
                 </div>
-                <div class="row" style="margin:5px">
+                <div class="row" style="margin:10px">
                     <div class="col-1">
-                        <i class="far fa-question-circle" data-mdb-toggle="tooltip" data-placement="right" title="Mao ni imong ganahan madawatan. Make it affordable and realistic na pwde magasto sa wampipti or 300." ></i>
+                        <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Mao ni imong ganahan madawatan. Make it affordable and realistic na pwde magasto sa wampipti or 300." ></i>
                     </div>
-                    <div class="col-4" style="text-align:right">
-                        <label >Wishlist </label>
+                    <div class="col-4" style="text-align:right;color:white">
+                        <label style="position:relative;top:20%">Wishlist </label>
                     </div>
                     <div id="wishlist" class="col-6" style="text-align:left">
                         <input type="text" id="wishList" class="form-control"  />

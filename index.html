@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-6" style="text-align:left">  
                         <select id="aux" name="auxilliary" class="form-select" >
-                        <option value="" selected>Select an Option</option>
+                        <option value="-1" selected>Select an Option</option>
                         <option value="0">Youth Unlimited</option>
                         <option value="1">Young Professional</option>
                       </select>
@@ -122,7 +122,7 @@
                 'wishlist'     : $('#wishList').val()
                 };
 
-                if(postForm.fname != ""&& postForm.sname != "" && postForm.aux != "" && postForm.wishlist != ""){
+                if(postForm.fname != ""&& postForm.sname != "" && postForm.aux < 0 && postForm.wishlist != ""){
                     if(postForm.fname.length < 3){
                         alert("Full name must be greater than 3");
                         $("#sbtn").removeAttr("disabled");

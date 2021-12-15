@@ -103,9 +103,9 @@
         $( document ).ready(function() {
             console.log( "ready!" );
             $("#aux").change(function(){
-                if($("#aux").val() == 1){
+                if($("#aux").val() == 0){
                     $("#budget").val("At least 150 pesos");
-                }else if($("#aux").val() == 2){
+                }else if($("#aux").val() == 1){
                     $("#budget").val("At least 300 pesos");
                 }else{
                     $("#budget").val("");

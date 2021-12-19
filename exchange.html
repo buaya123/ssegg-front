@@ -8,6 +8,31 @@
 
     </head>
     <body style="background-color: rgb(56,90,124);">
+
+        <div>
+
+        </div>
+                <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header"> 
+                <h4 class="modal-title">Your lucky alipin is <span id="alipin" style="color:rgb(249,113,113)"></span></h4>
+                </div>
+                <div class="modal-body">
+                <h2 style="text-align:center;color:rgb(249,113,113)">Wishlist</h2>
+                <h3 id="wishlist"></h3>
+                </div>
+                <div class="modal-footer">
+                <button id="btnclose" type="button" class="btn btn-default" >Close</button>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+
         <div class="container-fluid">
             <div  class="d-flex justify-content-around" >
                 <div id="btnbox" class="col-auto flex-shrink-1 col-lg-8 col-md-6 col-12">
@@ -17,9 +42,9 @@
             </div>
         </div>
         
-        
-    </body>
+         </body>
     <script>
+        
         $( document ).ready(function() {
             console.log( "ready!" );
 
@@ -30,9 +55,31 @@
                         success   : function(data) {
                             var i = 0;
                             for(i=0;i<data.length;i ++){
-                                $("#btnbox").append("<button type='button' class='btn btn-primary' style='background-color:rgb(138,214,204);border-color:rgb(138,214,204);margin:10px'>"+data[i].sname+"</button>")
+                                $("#btnbox").append("<button data-id='"+data[i].exchange_to+"' type='button' class='btn btn-primary openModal' style='background-color:rgb(138,214,204);border-color:rgb(138,214,204);margin:10px'>"+data[i].sname+"</button>")
                             }
                         }
+            });
+
+            $(document).on("click", ".openModal", function () {
+                var exchange_to = $(this).data('id');
+                
+                $.ajax({ //Process the form using $.ajax()
+                        type      : 'GET', //Method type
+                        url       : 'https://ssegg.vercel.app/getsamaritan/'+exchange_to, //Your form processing file URL
+                        dataType  : 'json',
+                        success   : function(data) {
+                            $("#alipin").text(data[0].sname)
+                            $("#wishlist").text(data[0].wishlist)
+                            $("#myModal").modal("show");
+                        }
+                });
+
+
+            });
+
+            $("#btnclose").click(function(){
+                $("#myModal").modal("hide");
+
             });
 
         });

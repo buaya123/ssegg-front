@@ -99,9 +99,10 @@
                 var postForm = { //Fetch form data
                 'fname'     : $('#fname').val(),
                 'sname'     : $('#sname').val(),
-                'aux'     : 150,
+                'aux'     : 1,
                 'wishlist'     : $('#wishList').val()
                 };
+                console.log(postForm);
 
                 if(postForm.fname != "" && postForm.sname != "" && postForm.aux != -1 && postForm.wishlist != ""){
                     if(postForm.fname.length < 3){

@@ -7,83 +7,71 @@
     <head>
 
     </head>
-    <body style="background-image: url(resources/bkg.jpg); height:100%;background-position: center;
+    <body style="background-image: url(resources/bkg.jpg); height:100%; width:auto;background-position: center;
     background-repeat: no-repeat;
     background-size: cover;">
-        <div class="row">
-            <span style="text-align:center;font-size:45px;font-family: 'Brush Script MT', cursive;background-color:rgb(56,90,124);color:white">Secret Samaritan Exchange Gifts Generator</span>
-        </div>
-        <div class="container-fluid" style="position:absolute;top:10vh">
-            <div class="row" >
-                <div style="text-align:center">
-                    <img  src="resources/newestlogo.png" style="width:350;height:300">
-                </div>  
+        <div class="row" style="text-align:center;font-size:45px;font-family: 'Brush Script MT', cursive; color:white">
+            
+            <div class="col-12" style="background: linear-gradient(0.25turn, #DD01A9, #4F87F6, #1CF5ED);">
+                    <img src="./resources/newestlogo.png" alt="Youth Unlimited" style="height:70px; width:auto; margin:10px">
+                <span >Youth Unlimited Secret Samaritan Exchange Gifts Generator</span>
             </div>
-            <div class="container-fluid" style="position:absolute;top:120%">
+        </div>
+        <div class="container-fluid" style="position:absolute;top:20%;">
+           <div class="row-sm-10" style="height:100%;width:auto">
+
+           
+            <div class="container-fluid" style="position:absolute;top:100%">
                 <div class="row justify-content-center">
-                <div class="col-6 card" style="text-align: center;background-color: rgba(56,90,124,.7)">
+                <div class="col-6 card" style="text-align: center;background: linear-gradient(0.25turn, #DD01A9, #4F87F6, #1CF5ED);">
             <div class="card-body">
                
-                <div class="row" style="margin:10px">
-                    <div class="col-1">
+                <div class="row" style="margin:20px;">
+                    <div class="col-sm-1">
                         <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Example: Kimberly Anne P. Velasco" ></i>
                     </div>
-                    <div class="col-4" style="text-align:right;color:white;vertical-align: middle;">
-                        <label style="position:relative;top:20%">Full Name</label>
+                       
+                    <div class="col-sm-4" style="text-align:center;color:white;vertical-align: middle;">
+                    <label style="position:relative;top:20%">Full Name</label>
                     </div>
-                    <div class="col-6" style="text-align:left">
+                    <div class="col-sm-6" style="text-align:center">
                         <input id="fname" type="text" name="fullName" class="form-control"  />
                     </div>
                 </div> 
-                <div class="row" style="margin:10px">   
+                <div class="row" style="margin:20px">   
                     <div class="col-1">
                         <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Pamili ug something na dili mahalata na ikaw. Duh." ></i>
                     </div>
-                    <div class="col-4" style="text-align:right;color:white">
+                    <div class="col-sm-4" style="text-align:center;color:white">
                         <label style="position:relative;top:20%">Secret Code Name </label>
                     </div>
-                    <div class="col-6" style="text-align:left">
+                    <div class="col-sm-6" style="text-align:center">
                         <input id="sname" type="text" name="secretName" class="form-control"  />
                     </div>
                 </div>
-                <div class="row" style="margin:10px"> 
-                    <div class="col-1">
-                        <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Youth Unlimited / Young Professional" ></i>
-                    </div>   
-                    <div class="col-4" style="text-align:right;color:white">
-                        <label style="position:relative;top:20%">Auxilliary </label>
-                    </div>
-                    <div class="col-6" style="text-align:left">  
-                        <select id="aux" name="auxilliary" class="form-select" >
-                        <option value="-1" selected>Select an Option</option>
-                        <option value="0">Youth Unlimited</option>
-                        <option value="1">Young Professional</option>
-                      </select>
-                    </div>
-                </div>
-                <div class="row" style="margin:10px">
-                    <div class="col-1">
+                
+                <div class="row" style="margin:20px">
+                    <div class="col-sm-1">
                         <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Mao ni imong gastuon para sa gift na imong ihatag." ></i>
                     </div>
-                    <div class="col-4" style="text-align:right;color:white">
+                    <div class="col-sm-4" style="text-align:center;color:white">
                         <label style="position:relative;top:20%">Budget </label>
                     </div>
-                    <div class="col-6" style="text-align:left">
-                        <input type="text" id="budget" class="form-control"  style="background-color: rgb(212, 212, 212)" readonly>
+                    <div class="col-sm-6" style="text-align:center">
+                        <input type="text" id="budget" class="form-control"  style="background-color: rgb(212, 212, 212)" value="PHP 150" readonly>
                     </div>
                 </div>
-                <div class="row" style="margin:10px">
-                    <div class="col-1">
+                <div class="row" style="margin:20px">
+                    <div class="col-sm-1">
                         <i class="fas fa-question-circle" style="color:white;position:relative;top:30%" data-mdb-toggle="tooltip" data-placement="right" title="Mao ni imong ganahan madawatan. Make it affordable and realistic na pwde magasto sa wampipti or 300." ></i>
                     </div>
-                    <div class="col-4" style="text-align:right;color:white">
+                    <div class="col-sm-4" style="text-align:center;color:white">
                         <label style="position:relative;top:20%">Wishlist </label>
                     </div>
-                    <div id="wishlist" class="col-6" style="text-align:left">
+                    <div id="wishlist" class="col-sm-6" style="text-align:center">
                         <input type="text" id="wishList" class="form-control"  />
                     </div>
                 </div>
-                <br/>
                 <br/>
                 <div class="row" >
                     <div style="text-align:center">
@@ -94,7 +82,7 @@
             </div>
         </div>
         </div>
-        
+    </div>
         
             
         </div>
@@ -103,15 +91,7 @@
         $( document ).ready(function() {
             console.log( "ready!" );
             
-            $("#aux").change(function(){
-                if($("#aux").val() == -1 ){
-                    $("#budget").val("");
-                }else if($("#aux").val() == 0){
-                    $("#budget").val("At least 150 pesos");
-                }else if($("#aux").val() == 1){
-                    $("#budget").val("At least 300 pesos");
-                }
-            });
+            
             $("#sbtn").click(()=>{
 
                 $("#sbtn").attr("disabled",true);
@@ -119,7 +99,7 @@
                 var postForm = { //Fetch form data
                 'fname'     : $('#fname').val(),
                 'sname'     : $('#sname').val(),
-                'aux'     : $('#aux').val(),
+                'aux'     : 150,
                 'wishlist'     : $('#wishList').val()
                 };
 
